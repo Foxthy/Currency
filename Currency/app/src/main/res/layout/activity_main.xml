@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvcurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Currency Converter"
+        android:textColor="#2196F3"
+        android:textSize="30dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvfrom"
+        android:text="From:"
+        android:layout_below="@id/tvcurrency"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autotvfrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvfrom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:hint="United States Dollar(USD)" />
+    <ImageView
+        android:id="@+id/imagefrom"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tvfrom"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:src="@mipmap/baseline_expand_more_black_24dp"
+
+        />
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvto"
+        android:text="To:"
+        android:layout_below="@id/autotvfrom"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autotvto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvto"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:hint="Euro(EUR)" />
+
+    <ImageView
+        android:id="@+id/imageto"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tvto"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:src="@mipmap/baseline_expand_more_black_24dp"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/autotvto"
+        android:layout_marginTop="20dp"
+        android:id="@+id/linear">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvamount"
+        android:text="Amount: "
+        android:layout_below="@id/autotvto"
+        android:layout_marginLeft="10dp"
+        android:textSize="25dp"
+        android:layout_marginRight="20dp"
+       />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:id="@+id/edtamount"
+           android:minEms="1"
+            android:text="1"
+            android:textSize="25dp"
+            android:layout_marginRight="40dp"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <Button
+        android:background="@drawable/button"
+
+        android:id="@+id/btnconvert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+
+        android:text="Convert" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/btnconvert"
+        android:layout_marginTop="20dp"
+        android:id="@+id/linear1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Result: "
+            android:layout_below="@id/autotvto"
+            android:layout_marginLeft="20dp"
+            android:textSize="25dp"
+            />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:textSize="25dp"
+           android:id="@+id/tvresult"
+           android:layout_marginRight="40dp"
+           android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
